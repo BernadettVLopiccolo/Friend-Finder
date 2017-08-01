@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>FriendFinderSurvey</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <hr>
+        <h2>About You</h2>
+        <h3>Name (Required)</h3>
+        <input class="userInfo" id="name" type="text" name="name">
+        <h3>Link to Photo Image (Required)</h3>
+        <input class="userInfo" id="link" type="link" name="photo">
+        <hr>
+        <h2>Question 1</h2>
+        <h3>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h3>
+        <div class="dropdown">
+        <select id="q1" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 2</h2>
+<h3>You rarely do something just out of sheer curiosity.</h3>
+<div class="dropdown">
+<select id="q2" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 3</h2>
+<h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+<div class="dropdown">
+<select id="q3" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 4</h2>
+<h3>You feel superior to other people.</h3>
+<div class="dropdown">
+<select id="q4" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 5</h2>
+<h3>Being organized is more important to you than being adaptable.</h3>
+<div class="dropdown">
+<select id="q5" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 6</h2>
+<h3>It is often difficult for you to relate to other people’s feelings.</h3>
+<div class="dropdown">
+<select id="q6" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 7</h2>
+<h3>You do not mind being at the center of attention.</h3>
+<div class="dropdown">
+<select id="q7" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 8</h2>
+<h3>Being right is more important than being cooperative when it comes to teamwork.</h3>
+<div class="dropdown">
+<select id="q8" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 9</h2>
+<h3>As a parent, you would rather see your child grow up kind than smart.</h3>
+<div class="dropdown">
+<select id="q9" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<h2>Question 10</h2>
+<h3>Your work style is closer to random energy spikes than to a methodical and organized approach.</h3>
+<div class="dropdown">
+<select id="q10" class="pickedOption">
+            <option value=""></option>
+            <option value="1" type="button" class="option">1 (Strongly Disagree)</option>
+            <option value="2" type="button" class="option">2</option>
+            <option value="3" type="button" class="option">3</option>
+            <option value="4" type="button" class="option">4</option>
+            <option value="5" type="button" class="option">5 (Strongly Agree)</option>
+        </select>
+</div>
+<button id="submitBtn" type="button"><span class="glyphicon glyphicon-ok-circle">Submit</button>
+<hr>
+
+</div>
+
+<footer>
+    <a href="../data/friends.js">API Friends List</a> |
+    <a href="https://github.com/BernadettVLopiccolo/FriendFinder" target="_blank">GitHub Repo</a>
+</footer>
+<div class="modal-fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Best Match</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="matchName"></p>
+        <p class="matchImage"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="matchContainer">
+    <h1>Best Match</h1>
+    <hr>
+    <h2 class="matchName">" "</h2>
+    <div class="matchImage">" "</div>
+    <hr>
+    <button id="closeBtn" type="button"><a href="survey.html"> Close</button>
+</div>
+ -->
+<style type="text/css">
+body {
+    margin-left: 60px;
+}
+  #submitBtn {
+  width: 100%;
+  margin-top: 20px;
+  /*margin: 40px;*/
+  height: 50px;
+  /*font-weight: bold;
+  font-size: 20px;*/
+  text-align: center;
+  /*padding-bottom: 20px;*/
+  border-radius: 4px;
+  background-color: #0197ca;
+}
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  /*font-weight: bold;*/
+}
+.pickedOption {
+    height: 25px;
+    width: 160px;
+}
+.matchImage {
+    width: 90%;
+    height: 60%;
+}
+
+.glyphicon.glyphicon-ok-circle {
+  font-size: 25px;
+  color: #fff;
+}
+
+.container {
+  margin-left: 30px;
+}
+.matchContainer {
+    margin-left: 40px;
+    width: 60%;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    height: 620px;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+.btn-primary {
+  background-color: red;
+  width: 100px;
+}
+footer {
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.dropdown-menu {
+    width: 100px;
+}
+.option {
+    background-color: #fff;
+    border-style: hidden;
+
+}
+li .option:hover {
+    background-color: #dbffef;
+}
+#name {
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+}
+#link {
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+}
+#closeBtn {
+    float: right;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    width: 60px;
+    height: 40px;
+    margin-right: 20px;
+    color: #000000;
+}
+#closeBtn:hover {
+    background-color: #0197ca;
+    color: #fff;
+
+}
+</style>
+<script type="text/javascript">
+
+ $(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+    $(".modal-fade").css("visibility", "hidden");
+
+
+ $(".btn.btn-secondary").on("click", function(event) {
+    $(".btn.btn-secondary").css("visibility", "visible");
+ });
+
+
+ $("#submitBtn").on("click", function(event) {
+    event.preventDefault();
+    // $(".matchContainer").css("visibility", "visible");
+    function validateSurvey() {
+        var valid = true;
+        $(".userInfo").each(function() {
+            if ($(this).val() === "")
+                valid = false;
+        });
+        $(".pickedOption").each(function() {
+            if($(this).val() === "")
+                valid = false;
+        });
+        return valid;
+    }
+    if (validateSurvey() == true)
+    {
+    var friend = {
+        name: $("#name").val().trim(),
+        photo: $("#link").val().trim(),
+        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+      }
+      console.log("friend", friend);
+      var currentURL = window.location.origin;
+      console.log("currentURL", currentURL);
+      $.post(currentURL + "/api/friends", friend, function(data) {
+        $("#matchName").text(data.name);
+        $("#matchImage").attr("src", data.photo);
+        $("#modal-fade").modal("toggle");
+        alert("Added a new friend!");
+      });
+      }
+       else {
+        alert("Please fill out the form before submitting!");
+      }
+      return false;
+ });
+ });
+
+</script>
+</body>
+
+
+
+</html>
