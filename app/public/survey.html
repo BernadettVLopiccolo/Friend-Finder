@@ -264,10 +264,7 @@ li .option:hover {
     color: #fff;
 
 }
-/*.modal-fade {
-    position: fixed;
-    margin-top:  10px;
-}*/
+
 </style>
 <script type="text/javascript">
 
@@ -280,10 +277,8 @@ li .option:hover {
     $(".modal-fade").css("visibility", "hidden");
  });
 
-
  $("#submitBtn").on("click", function(event) {
     event.preventDefault();
-    // $(".matchContainer").css("visibility", "visible");
     function validateSurvey() {
         var valid = true;
         $(".userInfo").each(function() {
@@ -303,14 +298,12 @@ li .option:hover {
         photo: $("#link").val().trim(),
         scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
       }
-      // console.log("friend", friend);
       var currentURL = window.location.origin;
-      // console.log("currentURL", currentURL);
       $.post(currentURL + "/api/friends", newFriendData, function(data) {
         $(".modal-fade").css("visibility", "visible");
-        $("#matchName").text(data.name);
-        $("#matchImage").attr("src", data.photo);
-        $("#modal-fade").modal("toggle");
+        $(".matchName").text(data.name);
+        $(".matchImage").attr("src", data.photo);
+        // $(".modal-fade").modal("toggle");
         alert("Added a new friend!");
 
       });
