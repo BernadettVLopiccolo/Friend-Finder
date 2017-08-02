@@ -146,7 +146,7 @@
 </div>
 
 <footer>
-    <a href="../data/friends.js">API Friends List</a> |
+    <a href="/api/friends">API Friends List</a> |
     <a href="https://github.com/BernadettVLopiccolo/FriendFinder" target="_blank">GitHub Repo</a>
 </footer>
 <div class="modal-fade">
@@ -168,15 +168,6 @@
     </div>
   </div>
 </div>
-<!-- <div class="matchContainer">
-    <h1>Best Match</h1>
-    <hr>
-    <h2 class="matchName">" "</h2>
-    <div class="matchImage">" "</div>
-    <hr>
-    <button id="closeBtn" type="button"><a href="survey.html"> Close</button>
-</div>
- -->
 <style type="text/css">
 body {
     margin-left: 60px;
@@ -184,12 +175,8 @@ body {
   #submitBtn {
   width: 100%;
   margin-top: 20px;
-  /*margin: 40px;*/
   height: 50px;
-  /*font-weight: bold;
-  font-size: 20px;*/
   text-align: center;
-  /*padding-bottom: 20px;*/
   border-radius: 4px;
   background-color: #0197ca;
 }
@@ -204,7 +191,6 @@ h2 {
 
 h3 {
   font-size: 18px;
-  /*font-weight: bold;*/
 }
 .pickedOption {
     height: 25px;
@@ -278,6 +264,10 @@ li .option:hover {
     color: #fff;
 
 }
+/*.modal-fade {
+    position: fixed;
+    margin-top:  10px;
+}*/
 </style>
 <script type="text/javascript">
 
@@ -287,7 +277,7 @@ li .option:hover {
 
 
  $(".btn.btn-secondary").on("click", function(event) {
-    $(".btn.btn-secondary").css("visibility", "visible");
+    $(".modal-fade").css("visibility", "hidden");
  });
 
 
@@ -308,19 +298,21 @@ li .option:hover {
     }
     if (validateSurvey() == true)
     {
-    var friend = {
+    var newFriendData = {
         name: $("#name").val().trim(),
         photo: $("#link").val().trim(),
         scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
       }
-      console.log("friend", friend);
+      // console.log("friend", friend);
       var currentURL = window.location.origin;
-      console.log("currentURL", currentURL);
-      $.post(currentURL + "/api/friends", friend, function(data) {
+      // console.log("currentURL", currentURL);
+      $.post(currentURL + "/api/friends", newFriendData, function(data) {
+        $(".modal-fade").css("visibility", "visible");
         $("#matchName").text(data.name);
         $("#matchImage").attr("src", data.photo);
         $("#modal-fade").modal("toggle");
         alert("Added a new friend!");
+
       });
       }
        else {
