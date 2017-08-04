@@ -12,27 +12,29 @@ module.exports = function(app) {
         var bestMatch = {
             name: "",
             photo: "",
-            matchDifference: ""
+            matchDifference: 1
         };
         var newFriendData = req.body;
         var newFriendName = newFriendData.name;
         var newFriendPhoto = newFriendData.photo;
         var newFriendScores = newFriendData['scores[]'];
-
+         console.log("newFriendScores", newFriendScores);
         for (var i = 0; i < [friends].length; i++) {
 
-            totalDifference = 0;
+            // totalDifference = 0;
 
             for (var j = 0; j < newFriendData['scores[]'].length; j++) {
 
                 totalDifference += Math.abs(parseInt(friends[i].scores[j]) - parseInt(newFriendScores[j]));
-
+                 console.log("totalDifference", totalDifference);
                 if (totalDifference <= bestMatch.matchDifference) {
-                    console.log("bestMatch", bestMatch);
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
                     bestMatch.matchDifference = totalDifference;
-                }
+                    console.log("bestMatch", bestMatch);
+                } else {
+                    console.log("I am sorry, we have no match for you!");
+                } return false;
             }
         }
         friends.push(newFriendData);
